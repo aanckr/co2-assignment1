@@ -1,0 +1,247 @@
+*{
+    font-family: Hammersmith One;
+    background-color: #555555;
+}
+
+header{
+    background-color: #3D405B;
+    height: 100px;
+    margin: 0;
+}
+
+#headline{
+    color: #3D405B;
+    opacity: 0.5;
+    font-size: 70px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin-top: 0;
+    letter-spacing: 0.2em;
+}
+
+.navigation{
+    margin: 0;
+    height: 40px;
+    background-color: #8B8C9D;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-top: 13px;
+    font-size: 1.5em;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #3D405B;
+    background-color: #8B8C9D;
+}
+
+.themeBtn{
+    width: 120px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 90%;
+    background-color: #3D405B;
+    color: #F4F1DE;
+    border: none;
+    border-radius: 0.3em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+h1{
+    color: #3D405B;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+.one{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 85%;
+    align-content: center;
+    margin: 0 auto 0 auto;
+}
+
+img{
+    float: left;
+    width: 120px;
+    height: 100px;
+    margin: 10px 30px 10px 5%;
+}
+
+#text2 li{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 85%;
+    align-content: center;
+    margin: 0 auto 0 auto;
+}
+
+#text3 li{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 85%;
+    align-content: center;
+    margin: 10px auto 10px auto;
+}
+
+#text4 li{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 85%;
+    align-content: center;
+    margin: 10px auto 10px auto;
+}
+
+.overall{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 85%;
+    align-content: center;
+    margin: 0 auto 100px 7.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#app, #summaryPage, #noQuestionAnswered{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 50%;
+    align-content: center;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 30px;
+}
+
+#app h1, #summaryPage h1{
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 2px solid #8B8C9D;
+}
+
+
+.quiz h3{
+    color: #3D405B;
+}
+
+#summaryPage p{
+    color: #F4F1DE;
+}
+
+.btn{
+    background-color: #3D405B;
+    color: #F4F1DE;
+    width: 60%;
+    border: 0;
+    border-radius: 0.3em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+    margin: 10px 20% ;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background-color: #8B8C9D;
+    color: #F4F1DE;
+}
+
+#textField, #emailInput{
+    background: #3D405B;
+    color: #F4F1DE;
+    width: 60%;
+    border: 0;
+    border-radius: 0.3em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+    margin: 10px 20% ;
+    text-align: left;
+    cursor: pointer;
+}
+
+#textField:hover{
+    background-color: #8B8C9D;
+    color: #F4F1DE;
+}
+
+.skip-btn, #finish-btn, #yesBtn{
+    background-color: #3D405B;
+    color: #F4F1DE;
+    font-weight: 500;
+    width: 150px;
+    border: none;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+#summaryPage{
+    margin-bottom: 50px;
+}
+
+#summaryPage h3{
+    color: #3D405B;
+    text-align: center;
+    margin: 30px auto 30px auto;
+}
+
+#summaryPage .answer{
+    margin: 10px 0;
+}
+
+.answer{
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+.correctAnswer{
+    color: green !important;
+}
+
+#noQuestionAnswered p{
+    color: #F4F1DE;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#emailWindow{
+    color: #F4F1DE;
+    text-align: justify;
+    width: 400px;
+    align-content: center;
+    margin: 20px auto 100px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+}
+
+
+#email{
+    color: #F4F1DE;
+    text-align: center;
+}
+
+#emailInput{
+    display: none;
+    margin-top: 20px;
+}
+
+#sendBtn{
+    background: #3D405B;
+    color: #F4F1DE;
+    font-weight: 500;
+    width: 100px;
+    border: none;
+    padding: 5px;
+    margin-left: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
