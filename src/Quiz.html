@@ -1,148 +1,206 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>Quiz</title>
-      <link rel="stylesheet" href="https://fonts.google.com/specimen/Hammersmith+One">
-      <link id="theme" type="text/css" rel="stylesheet" href="lightTheme.css">
-    </head>
-    <body>
-      <header>
-        <p id="headline">EMPOWERING A SMARTER FUTURE</p>
-      </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One"
+    />
+    <link id="theme" type="text/css" rel="stylesheet" href="lightTheme.css" />
+  </head>
+  <body>
+    <header>
+      <p id="headline">EMPOWERING A SMARTER FUTURE</p>
+    </header>
 
-      <nav>
-        <div class="navigation"><a href="Home.html">Home</a></div>
-        <div class="navigation"><a href="Benefits.html">Benefits</a></div>
-        <div class="navigation"><a href="Risks.html">Risks</a></div>
-        <div class="navigation"><a href="Quiz.html">Quiz</a></div>
-      </nav>
-      <main>
-        <button onclick="changeThemeDark('darkTheme.css')" class="themeBtn" id="dark">Dark Theme</button>
-        <button onclick="changeThemeLight('lightTheme.css')" class="themeBtn" id="light">Light Theme</button>
+    <nav>
+      <div class="navigation"><a href="Home.html">Home</a></div>
+      <div class="navigation"><a href="Benefits.html">Benefits</a></div>
+      <div class="navigation"><a href="Risks.html">Risks</a></div>
+      <div class="navigation"><a href="Quiz.html">Quiz</a></div>
+    </nav>
+    <main>
+      <button
+        onclick="changeThemeDark('darkTheme.css')"
+        class="themeBtn"
+        id="dark"
+      >
+        Dark Theme
+      </button>
+      <button
+        onclick="changeThemeLight('lightTheme.css')"
+        class="themeBtn"
+        id="light"
+      >
+        Light Theme
+      </button>
 
-        <div id="app">
+      <div id="app">
+        <h1>Quiz</h1>
 
-          <h1>Quiz</h1>
+        <div id="quiz1">
+          <h3 class="question">
+            Can AI enhance decision-making by analyzing large amounts of data
+            and providing valuable insights?
+          </h3>
 
-          <div id="quiz1">
-
-            <h3 class="question">Can AI enhance decision-making by analyzing large amounts of data and providing valuable insights?</h3>
-
-            <div class="answer-btn">
-              <button class="btn" onclick="validate(true, 'True')">True</button>
-              <button class="btn" onclick="validate(false, 'False')">False</button>
-            </div>
-
-            <button class="skip-btn" onclick="skipQuestion()">Skip</button>
-
+          <div class="answer-btn">
+            <button class="btn" onclick="validate(true, 'True')">True</button>
+            <button class="btn" onclick="validate(false, 'False')">
+              False
+            </button>
           </div>
 
-
-
-          <div id="quiz2">
-
-            <h3 class="question">Which of the following is NOT a potential benefit of AI?</h3>
-
-            <div class="answer-btn">
-              <button class="btn" onclick="validate(false, 'Increased efficiency')">Increased efficiency</button>
-              <button class="btn" onclick="validate(false, 'Enhanced creativity')">Enhanced creativity</button>
-              <button class="btn" onclick="validate(false, 'Improved decision-making')">Improved decision-making</button>
-              <button class="btn" onclick="validate(true, 'Job displacement')">Job displacement</button>
-            </div>
-
-            <button class="skip-btn" onclick="skipQuestion()">Skip</button>
-
-          </div>
-
-
-          <div id="quiz3">
-
-            <h3 class="question">Which sector has witnessed significant advancements due to AI?</h3>
-
-            <div class="answer-btn">
-              <button class="btn" onclick="validate(false, 'Agriculture')">Agriculture</button>
-              <button class="btn" onclick="validate(true, 'Medicine')">Medicine</button>
-            </div>
-
-            <button class="skip-btn" onclick="skipQuestion()">Skip</button>
-
-          </div>
-
-
-
-          <div id="quiz4">
-
-            <h3 class="question">What is one of the major ethical concerns associated with AI?</h3>
-
-            <div class="answer-btn">
-              <button class="btn" onclick="validate(true, 'Data privacy')">Data privacy</button>
-              <button class="btn" onclick="validate(false, 'Increased productivity')">Increased productivity</button>
-              <button class="btn" onclick="validate(false, 'Job creation')">Job creation</button>
-              <button class="btn" onclick="validate(false, 'Improved accuracy')">Improved accuracy</button>
-            </div>
-
-            <button class="skip-btn" onclick="skipQuestion()">Skip</button>
-
-          </div>
-
-
-
-          <div id="quiz5">
-
-            <h3 class="question">What does "AI" stand for?</h3>
-
-            <div id="answer-field">
-              <input type="text" id="textField" placeholder="Type here ...">
-            </div>
-
-            <button id="finish-btn" onclick="summary()">Finish</button>
-
-          </div>
-
+          <button class="skip-btn" onclick="skipQuestion()">Skip</button>
         </div>
 
-        <div id="summaryPage">
-          <h1>Summary</h1>
+        <div id="quiz2">
+          <h3 class="question">
+            Which of the following is NOT a potential benefit of AI?
+          </h3>
 
-          <h3>Your score: <span id="score"></span>/10</h3>
+          <div class="answer-btn">
+            <button
+              class="btn"
+              onclick="validate(false, 'Increased efficiency')"
+            >
+              Increased efficiency
+            </button>
+            <button
+              class="btn"
+              onclick="validate(false, 'Enhanced creativity')"
+            >
+              Enhanced creativity
+            </button>
+            <button
+              class="btn"
+              onclick="validate(false, 'Improved decision-making')"
+            >
+              Improved decision-making
+            </button>
+            <button class="btn" onclick="validate(true, 'Job displacement')">
+              Job displacement
+            </button>
+          </div>
 
-          <p class="question">Can AI enhance decision-making by analyzing large amounts of data and providing valuable insights?</p>
-          <p class="answer">You answered: <span id="answer1"></span></p>
-          <p class="answer">The correct answer is: <span class="correctAnswer">True</span></p>
-
-          <p class="question">Which of the following is NOT a potential benefit of AI?</p>
-          <p class="answer">You answered: <span id="answer2"></span></p>
-          <p class="answer">The correct answer is: <span class="correctAnswer">Job displacement</span></p>
-
-          <p class="question">Which sector has witnessed significant advancements due to AI?</p>
-          <p class="answer">You answered: <span id="answer3"></span></p>
-          <p class="answer">The correct answer is: <span class="correctAnswer">Medicine</span></p>
-
-          <p class="question">What is one of the major ethical concerns associated with AI?</p>
-          <p class="answer"> You answered: <span id="answer4"></span></p>
-          <p class="answer">The correct answer is: <span class="correctAnswer">Data privacy</span></p>
-
-          <p class="question">What does "AI" stand for?</p>
-          <p class="answer">You answered: <span id="answer5"></span></p>
-          <p class="answer">The correct answer is: <span class="correctAnswer">Artificial Intelligence</span></p>
-
+          <button class="skip-btn" onclick="skipQuestion()">Skip</button>
         </div>
 
+        <div id="quiz3">
+          <h3 class="question">
+            Which sector has witnessed significant advancements due to AI?
+          </h3>
 
-        <div id="emailWindow">
-          <p id="email">Do you would like to get the summary via Email?</p>
-          <button id="yesBtn" onclick="emailQuestion()">Yes</button>
-          <input type="email" id="emailInput" placeholder="Email">
-          <button id="sendBtn">Send</button>
+          <div class="answer-btn">
+            <button class="btn" onclick="validate(false, 'Agriculture')">
+              Agriculture
+            </button>
+            <button class="btn" onclick="validate(true, 'Medicine')">
+              Medicine
+            </button>
+          </div>
+
+          <button class="skip-btn" onclick="skipQuestion()">Skip</button>
         </div>
 
-        <div id="noQuestionAnswered">
-          <p>You answered no questions!</p>
+        <div id="quiz4">
+          <h3 class="question">
+            What is one of the major ethical concerns associated with AI?
+          </h3>
+
+          <div class="answer-btn">
+            <button class="btn" onclick="validate(true, 'Data privacy')">
+              Data privacy
+            </button>
+            <button
+              class="btn"
+              onclick="validate(false, 'Increased productivity')"
+            >
+              Increased productivity
+            </button>
+            <button class="btn" onclick="validate(false, 'Job creation')">
+              Job creation
+            </button>
+            <button class="btn" onclick="validate(false, 'Improved accuracy')">
+              Improved accuracy
+            </button>
+          </div>
+
+          <button class="skip-btn" onclick="skipQuestion()">Skip</button>
         </div>
 
-        <script src="changeTheme.js"></script>
-        <script src="quiz.js"></script>
-      </main>
-    </body>
-  </html>
+        <div id="quiz5">
+          <h3 class="question">What does "AI" stand for?</h3>
+
+          <div id="answer-field">
+            <input type="text" id="textField" placeholder="Type here ..." />
+          </div>
+
+          <button id="finish-btn" onclick="summary()">Finish</button>
+        </div>
+      </div>
+
+      <div id="summaryPage">
+        <h1>Summary</h1>
+
+        <h3>Your score: <span id="score"></span>/10</h3>
+
+        <p class="question">
+          Can AI enhance decision-making by analyzing large amounts of data and
+          providing valuable insights?
+        </p>
+        <p class="answer">You answered: <span id="answer1"></span></p>
+        <p class="answer">
+          The correct answer is: <span class="correctAnswer">True</span>
+        </p>
+
+        <p class="question">
+          Which of the following is NOT a potential benefit of AI?
+        </p>
+        <p class="answer">You answered: <span id="answer2"></span></p>
+        <p class="answer">
+          The correct answer is:
+          <span class="correctAnswer">Job displacement</span>
+        </p>
+
+        <p class="question">
+          Which sector has witnessed significant advancements due to AI?
+        </p>
+        <p class="answer">You answered: <span id="answer3"></span></p>
+        <p class="answer">
+          The correct answer is: <span class="correctAnswer">Medicine</span>
+        </p>
+
+        <p class="question">
+          What is one of the major ethical concerns associated with AI?
+        </p>
+        <p class="answer">You answered: <span id="answer4"></span></p>
+        <p class="answer">
+          The correct answer is: <span class="correctAnswer">Data privacy</span>
+        </p>
+
+        <p class="question">What does "AI" stand for?</p>
+        <p class="answer">You answered: <span id="answer5"></span></p>
+        <p class="answer">
+          The correct answer is:
+          <span class="correctAnswer">Artificial Intelligence</span>
+        </p>
+      </div>
+
+      <div id="emailWindow">
+        <p id="email">Do you would like to get the summary via Email?</p>
+        <button id="yesBtn" onclick="emailQuestion()">Yes</button>
+        <input type="email" id="emailInput" placeholder="Email" />
+        <button id="sendBtn">Send</button>
+      </div>
+
+      <div id="noQuestionAnswered">
+        <p>You answered no questions!</p>
+      </div>
+
+      <script src="changeTheme.js"></script>
+      <script src="quiz.js"></script>
+    </main>
+  </body>
+</html>
