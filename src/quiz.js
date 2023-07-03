@@ -4,6 +4,7 @@ const quiz3 = document.getElementById("quiz3");
 const quiz4 = document.getElementById("quiz4");
 const quiz5 = document.getElementById("quiz5");
 const summaryPage = document.getElementById("summaryPage");
+const finishBtn = document.getElementById("finish-btn").value;
 const noQuestion = document.getElementById("noQuestionAnswered");
 const emailWindow = document.getElementById("emailWindow");
 const emailInput = document.getElementById("emailInput");
@@ -25,7 +26,7 @@ let index = 0;
 let count = 0;
 let answers = [];
 
-skipCount()
+
 
 function validate(value, userAnswer){
 
@@ -47,7 +48,11 @@ function validateTextAnswer(){
 
   let value = document.getElementById("textField").value;
 
-  value = value ? value : "Question skipped"
+  if(!value){
+     value = "Question skipped";
+     count++;
+  }
+
    if(value === 'Artificial Intelligence'){
       score += 2;
    }
@@ -84,47 +89,59 @@ function skipQuestion(){
    nextQuestion()
 
    count++
+   console.log(count);
+
 
    const answer = "Question skipped";
 
    answers.push(answer);
 }
 
-function skipCount(){
+/*function skipCount(){
+   let value = document.getElementById("textField").value;
 
-   let button = document.getElementsByClassName("skip-btn");
-
-   let value = document.getElementById("textField");
-   if (value == ''){
+   if (finishBtn.click && value == ''){
       count++
-   };
+   }
+
+   console.log(count);
 
    if (count >= 5){
-      document.getElementById("app").hidden = true;
-      document.getElementById("noQuestionAnswered").hidden = false;
+      noQuestion.hidden = false;
+      summaryPage.hidden = true;
+      emailWindow.hidden = true;
    }
-}
+}*/
 
 function summary(){
-
-   emailWindow.hidden = false;
    validateTextAnswer();
-   document.getElementById("app").hidden = true;
-   summaryPage.hidden = false;
 
-   document.getElementById("score").innerHTML = score;
-   const correctAnswers = document.getElementsByClassName("correctAnswer");
+   const appWindow = document.getElementById("app");
 
-   for(let i = 1; i <= answers.length; i++){
-      const answer = document.getElementById("answer"+i);
-      answer.innerHTML = answers[i-1];
+   if (count >= 5){
+      noQuestion.hidden = false;
+      summaryPage.hidden = true;
+      emailWindow.hidden = true;
+      appWindow.hidden = true;
+   }else {
+      emailWindow.hidden = false;
+      document.getElementById("app").hidden = true;
+      summaryPage.hidden = false;
+
+      document.getElementById("score").innerHTML = score;
+      const correctAnswers = document.getElementsByClassName("correctAnswer");
+
+      for(let i = 1; i <= answers.length; i++){
+         const answer = document.getElementById("answer"+i);
+         answer.innerHTML = answers[i-1];
 
 
-      if (correctAnswers[i-1].innerHTML === answers[i-1]){
-         answer.style.color = "green";
-      }else {
-         answer.style.color = "red";
-      };
+         if (correctAnswers[i-1].innerHTML === answers[i-1]){
+            answer.style.color = "green";
+         }else {
+            answer.style.color = "red";
+         };
+      }
    }
 }
 
@@ -132,20 +149,3 @@ function emailQuestion(){
    emailInput.style.display = "unset";
    sendBtn.style.display = "unset";
 }
-
-
-const element = document.getElementsByClassName("themeBtn");
-element.addEventListener("click", changeTheme);
-
-function changeTheme(sheet){
-   document.getElementById('theme').setAttribute('href', sheet);
-}
-
-  /* let changeTheme = document.getElementsByTagName('link')[0];
-
-   if (changeTheme.getAttribute('href') == "lightTheme.css"){
-      changeTheme.setAttribute('href', "darkTheme.css");
-   }else {
-      changeTheme.setAttribute('href', "lightTheme.css");
-   }
-}*/

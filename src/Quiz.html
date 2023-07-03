@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <title>Quiz</title>
       <link rel="stylesheet" href="https://fonts.google.com/specimen/Hammersmith+One">
-      <link type="text/css" rel="stylesheet" href="lightTheme.css">
+      <link id="theme" type="text/css" rel="stylesheet" href="lightTheme.css">
     </head>
     <body>
       <header>
@@ -18,7 +18,8 @@
         <div class="navigation"><a href="Quiz.html">Quiz</a></div>
       </nav>
       <main>
-        <button class="themeBtn" onclick="">Change Theme</button>
+        <button onclick="changeThemeDark('darkTheme.css')" class="themeBtn" id="dark">Dark Theme</button>
+        <button onclick="changeThemeLight('lightTheme.css')" class="themeBtn" id="light">Light Theme</button>
 
         <div id="app">
 
@@ -140,7 +141,8 @@
           <p>You answered no questions!</p>
         </div>
 
-        <script src="script.js"></script>
+        <script src="changeTheme.js"></script>
+        <script src="quiz.js"></script>
       </main>
     </body>
   </html>

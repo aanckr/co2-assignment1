@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <title>Risks</title>
       <link rel="stylesheet" href="https://fonts.google.com/specimen/Hammersmith+One">
-      <link type="text/css" rel="stylesheet" href="lightTheme.css">
+      <link id="theme" type="text/css" rel="stylesheet" href="lightTheme.css">
     </head>
     <body>
       <header>
@@ -19,7 +19,8 @@
       </nav>
 
       <main>
-        <button class="themeBtn" onclick="changeTheme()">Change Theme</button>
+        <button onclick="changeThemeDark('darkTheme.css')" class="themeBtn" id="dark">Dark Theme</button>
+        <button onclick="changeThemeLight('lightTheme.css')" class="themeBtn" id="light">Light Theme</button>
 
         <h1>Risks of Artificial Intelligence</h1>
 
@@ -67,6 +68,8 @@
             and ensure adequate safeguards to maximize the benefits of AI while minimizing potential risks.
           </p>
         </div>
+
+        <script src="changeTheme.js"></script>
       </main>
     </body>
   </html>

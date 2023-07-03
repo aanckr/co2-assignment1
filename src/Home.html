@@ -5,6 +5,7 @@
             <title>Home</title>
             <link rel="stylesheet" href="https://fonts.google.com/specimen/Hammersmith+One">
             <link id="theme" type="text/css" rel="stylesheet" href="lightTheme.css">
+            <script src="changeTheme.js"></script>
         </head>
 
         <body>
@@ -21,7 +22,8 @@
 
             <main>
 
-                <button onclick="changeTheme('darkTheme.css')" class="themeBtn">Change Theme</button>
+                <button onclick="changeThemeDark('darkTheme.css')" class="themeBtn" id="dark">Dark Theme</button>
+                <button onclick="changeThemeLight('lightTheme.css')" class="themeBtn" id="light">Light Theme</button>
 
                 <h1>Concept and types of Artificial Intelligence</h1>
 
@@ -107,7 +109,10 @@
                         and customer service, AI is permeating various sectors, revolutionizing processes, and unlocking new possibilities for
                         innovation and growth.
                     </p>
+                </div>
 
+                <div id="videoOfAI">
+                    <video src="pictures/miniRobot.mp4" controls loop></video>
                 </div>
             </main>
 
